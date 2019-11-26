@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>KITKMS LOGIN</title>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/logo.PNG') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.min.css') }}">
+</head>
+
+<body>
+  <!-- Login form -->
+  <div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+  <div class="login-dark" style="background-image:url(&quot; &quot;);background-color:rgb(255,255,255);height:800px;">
+      <form style="background-color:rgb(255,255,255);width:584px;" method="post" action="/">
+        {{ form.csrf_token }}
+          <!-- Addtional textarea -->
+          <h1 style="color:#c91b00;margin:0px 0px 13px 0px;">KIT Key management system</h1>
+          <p id="welcome" style="color:#909199;margin:0px 0px 64px 0px;">Welcome back! Please login to your account.</p>
+          <!-- Email input -->
+          <div class="form-group">
+              {% if form.email.errors %}
+                {{ form.email(**{'class': 'form-control is-invalid', 'placeholder': 'Email' , 'style' : "color: rgb(0,0,0);margin: 0px 0px 44px 0px;font-family: 'Source Sans Pro', sans-serif;"} ) }}
+                <div class="invalid-feedback">
+                  {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                  {% endfor %}
+                </div>
+                {% else %}
+                {{ form.email(**{'class': 'form-control', 'placeholder': 'Email' , 'style' : "color: rgb(0,0,0);margin: 0px 0px 44px 0px;font-family: 'Source Sans Pro', sans-serif;"} ) }}
+              {% endif %}
+          </div>
+          <!-- Password input -->
+          <div class="form-group">
+              {% if form.password.errors %}
+                {{ form.password(**{'class': 'form-control is-invalid', 'placeholder': 'Password' , 'style' : "color: rgb(0,0,0);margin: 0px 0px 86.2px 0px;font-family: 'Source Sans Pro', sans-serif;"} ) }}
+                <div class="invalid-feedback">
+                  {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                  {% endfor %}
+                </div>
+                {% else %}
+                {{ form.password(**{'class': 'form-control', 'placeholder': 'Password' , 'style' : "color: rgb(0,0,0);margin: 0px 0px 86.2px 0px;font-family: 'Source Sans Pro', sans-serif;"} ) }}
+              {% endif %}
+          </div>
+          <!-- Remember me -->
+          <div class="form-check test" style="width:131px;margin:0px 0px 64.1px 0px;">
+              {{ form.remember(class="form-check-input") }}
+              {{ form.remember.label(class="form-check-label",style="color:#43425d;") }}
+          </div>
+          <!-- Forgot password -->
+          <a class="forgot" style="font-size:16px;" href="{{ url_for('forgot') }}">Forgot password</a>
+          <!-- Loging btn -->
+          <div class="form-group">
+            {{ form.submit(class="btn btn-primary btn-block", style="background-color: #c91b00;") }}
+          </div><a class="term" style="font-size:11px;width:140px;color:#43425d;margin:0px 0px 0px 0px;"
+      href="https://doc-0c-30-apps-viewer.googleusercontent.com/viewer/secure/pdf/v2fbbh2v88fkk2o32jfhmspaasmprsqa/ioa50d3879iee5tpeo8pd452euogbnuo/1567231500000/drive/14950523046048104030/ACFrOgD_xgaf-0QcschjG_A2A5ytJi4wBpjZ3Zw-aSkMDkwLT7gWY_5Veh9ubNchDH31C_3ND2_DeQOezd3m3Ak39uvujBS8LDRzWRMt3HLMlMQXR0yyDWkwcK90Mnc=?print=true&nonce=0t93af5f6fiks&user=14950523046048104030&hash=cj9st5fsfjhr3npvalfpisginmkflgvj">Term of use. Privacy policy</a>
+      </form>
+  </div>
+  <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</body>
+</html>

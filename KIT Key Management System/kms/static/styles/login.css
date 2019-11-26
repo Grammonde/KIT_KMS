@@ -1,0 +1,95 @@
+body {
+  background-color: #ffffff;
+}
+.container{
+  margin-bottom: 10%;
+}
+.checkbox {
+  width: 30%;
+  height: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.checkbox1 {
+  text-align: center;
+}
+h2 {
+  margin-bottom: 0%;
+  color: #e84118;
+}
+p {
+  position: relative;
+  margin-top: 5%;
+  color: #909199;
+}
+input {
+  position: relative;
+  font-size: 20px;
+  top: 10%;
+  margin: 2% 0;
+  padding: 0;
+  width: 90%;
+  height: 20%;
+  border: none;
+  border-bottom: 1px solid;
+}
+.box {
+  position: relative;
+  top: 30%;
+}
+.form-group-input{
+}
+.btn {
+  position: relative;
+  margin-left: 5%;
+  margin-top: 5%;
+  padding: 10px;
+  width: 90%;
+  height: 10%;
+
+  text-align: center;
+  background-color: #e84118;
+  color: #ffffff;
+  width: 90%;
+}
+.form-check-input {
+  /*padding: 15px 15px;*/
+  display: inline-block;
+  margin: 0%;
+  /*margin-right: 10%;*/
+  position: relative;
+  /*top: 98%;*/
+  text-align: right;
+  float: left;
+}
+.pwd {
+  margin-left: 10%;
+  float: right;
+  text-decoration: none;
+}
+.form-inline {
+  margin: 5%;
+}
+.param1{
+  display: inline-block;
+}
+.checkboxx{
+  width: 20px;
+  height: 20px;
+}
+.control-label{
+  float: left;
+  margin-top: 20px;
+}
+.forgot{
+  display: inline-block;
+  position: relative;
+  float: right;
+}
+.flash{
+  color: red;
+}

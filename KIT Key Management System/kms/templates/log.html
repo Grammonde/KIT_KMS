@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 navigator-input" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 0px;">
+            <div class="modal fade" role="dialog" tabindex="-1" id="myModal1" style="margin-top: 10%;">
+            </div>
+            <section class="float-right"><span class="seach1" style="width: 277.38px;height: 38px;padding-top: 5px;padding-bottom: 5px;font-family: 'Source Sans Pro', sans-serif;"><i class="fa fa-search" style="margin-left: 10px;margin-bottom: 2px;"></i><input class="border rounded-0 border-white" type="text" id="searchinput" placeholder="Search" style="padding-left: 5px;height: 25px;font-family: 'Source Sans Pro', sans-serif;"></span>
+                <a
+                    href="#" style="height: 38px;color: #212529;font-family: 'Source Sans Pro', sans-serif;">Export<i class="fa fa-print" style="margin-left: 5px;"></i>&nbsp;</a><select style="height: 35px;margin-right: 20.4px;font-family: 'Source Sans Pro', sans-serif;"><optgroup label="Show"><option value="10" selected="">Show 10</option><option value="15">show 15</option><option value="20">Show 20</option></optgroup></select>
+            </section>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col"><div class="table-responsive" id="maintable" style="background-color: rgb(255,255,255);">
+    <table class="table">
+        <thead style="background-color: rgb(67,66,93);">
+            <tr class="text-uppercase text-sm-center" style="font-size: 16px;color: rgb(255,255,255);">
+                <th><strong>№</strong></th>
+                <th><strong>Date-Time</strong></th>
+                <th><strong>NAME</strong></th>
+                <th><strong>ID</strong></th>
+                <th><strong>POSITION</strong></th>
+                <th><strong>ROOM</strong></th>
+                <th><strong>STATUS</strong></th>
+                <th><strong>BATCH</strong></th>
+            </tr>
+        </thead>
+        {% for i in range(1,11) %}
+          <tbody style="color: rgb(255,255,255);">
+            <tr class="text-center" style="font-size: 1px;color: #000000;background-color: #ffffff;">
+                <td>{{i}}</td>
+                <td>31/Aug/2019</td>
+                <td>Panhavad Duk</td>
+                <td>1101801005</td>
+                <td>KIT STUDENT</td>
+                <td>GAII-AU</td>
+                <td>TAKEN</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+    <button class="seemoremore btn" style="margin-left:50%">See more</button>
+</div></div>
+    </div>
+{% endblock content %}

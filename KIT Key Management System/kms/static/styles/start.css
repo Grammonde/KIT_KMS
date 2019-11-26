@@ -1,0 +1,70 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Source Sans Pro";
+}
+.navbar {
+  background: #e84118;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: #ffffff;
+}
+.nav-item {
+  margin-left: 25px;
+}
+.pro_name {
+  font-size: 30px;
+}
+.head {
+  color: #4159b6;
+}
+.th3 {
+  padding: 20%;
+}
+.td3 {
+  padding: 20%;
+}
+.tablehead {
+  background: #e84118;
+  color: #ffffff;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+  margin-bottom: 0;
+  left: 12%;
+  width: 100%;
+}
+.tablebody {
+  text-align: center;
+  background: #ffffff;
+  color: #000;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: 15%;
+  border-bottom: 1px solid;
+  left: 12%;
+  width: 100%;
+}
+.search {
+  position: relative;
+  float: right;
+  margin-top: 0.5%;
+}
+.all {
+  display: inline;
+}
+.print {
+  padding: 0px 10px;
+}
+.show {
+  padding: 0px 10px;
+}
+.contain {
+  margin-left: 10%;
+}
+.table{
+  margin-top: 3%;
+  width: 100%;
+}
